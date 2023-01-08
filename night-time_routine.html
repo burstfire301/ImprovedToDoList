@@ -126,13 +126,45 @@
       .addBtn:hover {
         background-color: #bbb;
       }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div id="myDIV" class="header">
       <h2 style="margin: 5px">night-time routine</h2>
-      <input type="text" id="myInput" placeholder="add to list..." />
+      <input
+        type="text"
+        id="myInput"
+        placeholder="add to list..."
+        name="newItem"
+      />
       <span onclick="newElement()" class="addBtn">Add</span>
+      <a href="morning_routine.html">morning routine</a><br />
+      <a href="night-time_routine.html">night-time routine</a><br />
+      <a href="get_home_routine.html">get home routine</a><br />
     </div>
 
     <ul id="myUL">
@@ -143,7 +175,7 @@
       <li>unpack bag</li>
       <li>clean room</li>
       <li>make bed</li>
-      <li>make overnight oats</li>
+      <li>overnight oats</li>
       <li>dishes</li>
       <li>pack for tomorrow</li>
       <li>Pajamas</li>
@@ -152,6 +184,7 @@
       <li>breathing exercises</li>
       <li>work diary</li>
       <li>running clothes</li>
+      <li>social media</li>
       <li>go to bed</li>
     </ul>
 

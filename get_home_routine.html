@@ -126,13 +126,40 @@
       .addBtn:hover {
         background-color: #bbb;
       }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div id="myDIV" class="header">
-      <h2 style="margin: 5px">get_home_routine</h2>
+      <h2 style="margin: 5px">get home routine</h2>
       <input type="text" id="myInput" placeholder="add to list..." />
       <span onclick="newElement()" class="addBtn">Add</span>
+      <a href="morning_routine.html">morning routine</a><br />
+      <a href="night-time_routine.html">night-time routine</a><br />
+      <a href="get_home_routine.html">get home routine</a><br />
     </div>
 
     <ul id="myUL">

@@ -9,3 +9,6 @@ dynamic fields to create that change on mouse click:
 body background-color
 line 175 (title)
 line 183 (list)
+
+read morning routine from text file into list
+

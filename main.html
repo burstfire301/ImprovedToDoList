@@ -3,6 +3,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      :root {
+        --getHomeRoutineHeaderBackgroundColor: #df1cb8;
+        --morningRoutineHeaderBackgroundColor: #231cdf;
+        --currentHeaderBackgroundColor: #df1cb8;
+      }
+
       body {
         margin: 0;
         margin-left: 40%;
@@ -85,7 +91,7 @@
 
       /* Style the header */
       .header {
-        background-color: #df1cb8;
+        background-color: --currentHeaderBackgroundColor;
         padding: 30px 40px;
         color: white;
         text-align: center;
@@ -168,16 +174,48 @@
       .addBtn:hover {
         background-color: #bbb;
       }
+
+      .toDoList {
+        background-color: pink;
+      }
+
+      .morningRoutine {
+        background-color: red;
+      }
+
+      .nightTimeRoutine {
+        background-color: blue;
+      }
+
+      .getHomeRoutine {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
     <div id="myDIV" class="header">
       <h2 style="margin: 5px">get home routine</h2>
       <input type="text" id="myInput" placeholder="add to list..." />
-      <span onclick="addToList()" class="addBtn">Add</span>
+      
+      <span onclick="addToList()" class="addBtn">add</span>
+      <a href="morning_routine.html">click here go to the second page</a>
+      <a href="night-time_routine.html">click here go to the second page</a>
+      <a href="get_home_routine.html">click here go to the second page</a>
       <span onclick="morningRoutine()" class="morningBtn">morning routine</span>
-      <span onclick="nightTimeRoutine()" class="nightTimeBtn">night-time routine</span>
-      <span onclick="getHomeRoutine()" class="getHomeBtn">get home routine</span>
+      <span onclick="nightTimeRoutine()" class="nightTimeBtn"
+        >night-time routine</span
+      >
+      <span onclick="getHomeRoutine()" class="getHomeBtn"
+        >get home routine</span
+      >
+      <select name="choose list from menu" id="list chooser">
+        <option value="" selected disabled hidden>-- Select List --</option>
+        <option class="toDoList" value="">to do list</option>
+        <option class="morningRoutine" value="">morning routine</option>
+        <option class="nightTimeRoutine" value="">night time routine</option>
+        <option class="getHomeRoutine" value="">get home routine</option>
+      </select>
+      <button onclick="changeList()">change the list</button>
     </div>
 
     <ul id="myUL">
@@ -194,6 +232,12 @@
     </ul>
 
     <script>
+      function changeList() {
+        var x = document.getElementById("selectid");
+        var listColor = x.option[x.selectedIndex].value;
+        document.body.style.backgroundColor = listColor;
+      }
+
       // Create a "close" button and append it to each list item
       var myNodelist = document.getElementsByTagName("LI");
       var i;
@@ -252,34 +296,20 @@
             div.style.display = "none";
           };
         }
-      };
+      }
 
-      // Create a new list item when clicking on the "Add" button
+      // Switch to morning routine version of the website when button is clicked
       function morningRoutine() {
-        var li = document.createElement("li");
-        var inputValue = document.getElementById("myInput").value;
-        var t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === "") {
-          alert("You must write something!");
-        } else {
-          document.getElementById("myUL").appendChild(li);
-        }
-        document.getElementById("myInput").value = "";
-
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
-
-        for (i = 0; i < close.length; i++) {
-          close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-          };
-        }
-      };
+        var r = document.querySelector(":root");
+        r.style.setProperty(
+          "--currentHeaderBackgroundColor",
+          "--morningRoutineHeaderBackgroundColor"
+        );
+        console.log(r.style.getPropertyValue("--currentHeaderBackgroundColor"));
+        console.log(
+          r.style.getPropertyValue("--morningRoutineHeaderBackgroundColor")
+        );
+      }
 
       // Create a new list item when clicking on the "Add" button
       function nightTimeRoutine() {
@@ -306,7 +336,7 @@
             div.style.display = "none";
           };
         }
-      };
+      }
 
       // Create a new list item when clicking on the "Add" button
       function getHomeRoutine() {

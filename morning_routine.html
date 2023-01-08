@@ -126,25 +126,53 @@
       .addBtn:hover {
         background-color: #bbb;
       }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div id="myDIV" class="header">
-      <h2 style="margin: 5px">Morning Routine</h2>
+      <h2 style="margin: 5px">morning routine</h2>
       <input type="text" id="myInput" placeholder="add to list..." />
-      <span onclick="newElement()" class="addBtn">Add</span>
+      <span onclick="newElement()" class="addBtn">Add</span><br />
+      <a href="morning_routine.html">morning routine</a><br />
+      <a href="night-time_routine.html">night-time routine</a><br />
+      <a href="get_home_routine.html">get home routine</a><br />
     </div>
 
-    <ul id="myUL">
+    <ul id="morningRoutineList">
       <li>get up</li>
       <li>drink water</li>
+      <li>meds</li>
       <li>check calendar</li>
-      <li>breathing exercises</li>
-      <li>run/walk</li>
       <li>breakfast</li>
       <li>coffee</li>
       <li>gratitude</li>
       <li>daily stoic</li>
+      <li>breathing exercises</li>
+      <li>run/walk</li>
       <li>weight</li>
       <li>shower</li>
       <li>home workout</li>
@@ -154,10 +182,9 @@
       <li>get dressed</li>
       <li>dishes</li>
       <li>contact lenses</li>
-      <li>teeth, hair, moisturize</li>
       <li>wrist exercises</li>
-      <li>christmas poems</li>
       <li>social media</li>
+      <li>teeth, hair, moisturize</li>
     </ul>
 
     <script>
