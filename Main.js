@@ -1,3 +1,6 @@
+const completedToDoItemColor = "#82ed88";
+const notCompletedToDoItemColor = "#cccccc";
+
 function initializePage() {
   addListenerToList();
   showMorningRoutine();
@@ -10,12 +13,29 @@ function addListenerToList() {
     "click",
     function (ev) {
       if (ev.target.tagName === "LI") {
+        if (ev.target.querySelector("#checkbox").checked) {
+          ev.target.style.backgroundColor = notCompletedToDoItemColor;
+        } else {
+          ev.target.style.backgroundColor = completedToDoItemColor;
+        }
         ev.target.querySelector("#checkbox").checked =
           !ev.target.querySelector("#checkbox").checked;
-      } else if (
-        ev.target.id !== "checkbox" &&
-        ev.target.parentElement.tagName === "LI"
-      ) {
+      } else if (ev.target.id === "checkbox") {
+        if (!ev.target.parentElement.querySelector("#checkbox").checked) {
+          ev.target.parentElement.style.backgroundColor =
+            notCompletedToDoItemColor;
+        } else {
+          ev.target.parentElement.style.backgroundColor =
+            completedToDoItemColor;
+        }
+      } else if (ev.target.parentElement.tagName === "LI") {
+        if (ev.target.parentElement.querySelector("#checkbox").checked) {
+          ev.target.parentElement.style.backgroundColor =
+            notCompletedToDoItemColor;
+        } else {
+          ev.target.parentElement.style.backgroundColor =
+            completedToDoItemColor;
+        }
         ev.target.parentElement.querySelector("#checkbox").checked =
           !ev.target.parentElement.querySelector("#checkbox").checked;
       }
@@ -93,6 +113,7 @@ function showGetHomeRoutine() {
 function addItemToList(value) {
   // create a new list item
   var li = document.createElement("li");
+  li.style.backgroundColor = "#cccccc";
 
   // add bootstrap styling
   li.className = "row list-group-item";
