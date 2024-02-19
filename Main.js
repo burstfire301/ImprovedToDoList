@@ -12,6 +12,12 @@ function addListenerToList() {
       if (ev.target.tagName === "LI") {
         ev.target.querySelector("#checkbox").checked =
           !ev.target.querySelector("#checkbox").checked;
+      } else if (
+        ev.target.id !== "checkbox" &&
+        ev.target.parentElement.tagName === "LI"
+      ) {
+        ev.target.parentElement.querySelector("#checkbox").checked =
+          !ev.target.parentElement.querySelector("#checkbox").checked;
       }
     },
     false
@@ -98,12 +104,11 @@ function addItemToList(value) {
 
   // create a close button
   var button = document.createElement("button");
-  button.className = "btn-close col-4";
+  button.className = "btn-close";
 
   // create a checkbox
-  //<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
   var checkbox = document.createElement("input");
-  checkbox.className = "form-check-input me-1";
+  checkbox.className = "form-check-input";
   checkbox.id = "checkbox";
   checkbox.type = "checkbox";
 
