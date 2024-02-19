@@ -1,3 +1,12 @@
+/**
+ * Initializes the page by adding event listeners and setting up functionality.
+ */
+function initializePage() {
+  addCloseButtonToListItem();
+  closeButtonHidesListItem();
+  clickingOnListItemChecks();
+}
+
 // Create a "close" button and append it to each list item
 function addCloseButtonToListItem() {
   var myNodelist = document.getElementsByTagName("LI");
@@ -43,12 +52,6 @@ function newElement() {
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === "") {
-    alert("You must write something!");
-  } else {
-    document.getElementById("morning-routine-list").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -56,10 +59,10 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this.parentElement;
-      div.style.display = "none";
-    };
+  if (inputValue === "") {
+    alert("You must write something!");
+  } else {
+    document.getElementById("morning-routine-list").appendChild(li);
   }
+  document.getElementById("myInput").value = "";
 }
