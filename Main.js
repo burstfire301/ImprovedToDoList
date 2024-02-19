@@ -1,4 +1,9 @@
 function showMorningRoutine() {
+  //update the style sheet
+  document
+    .getElementById("stylesheet")
+    .setAttribute("href", "./Styles/MorningRoutine.css");
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -12,6 +17,11 @@ function showMorningRoutine() {
 }
 
 function showNightTimeRoutine() {
+  //update the style sheet
+  document
+    .getElementById("stylesheet")
+    .setAttribute("href", "./Styles/NightTimeRoutine.css");
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -24,6 +34,11 @@ function showNightTimeRoutine() {
 }
 
 function showGetHomeRoutine() {
+  //update the style sheet
+  document
+    .getElementById("stylesheet")
+    .setAttribute("href", "./Styles/GetHomeRoutine.css");
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
