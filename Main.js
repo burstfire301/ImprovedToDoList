@@ -1,6 +1,25 @@
 const completedToDoItemColor = "#82ed88";
 const notCompletedToDoItemColor = "#cccccc";
 
+const morningRoutineItems = [
+  "get up",
+  "turn on pc",
+  "drink water",
+  "shower",
+  "teeth",
+];
+
+const nightTimeRoutineItems = ["dishes", "brush teeth", "diary", "go to bed"];
+
+const getHomeRoutineItems = [
+  "wash hands",
+  "drink water",
+  "check calendar",
+  "social media",
+  "unpack bag",
+  "wash face",
+];
+
 function initializePage() {
   addListenerToList();
   showMorningRoutine();
@@ -21,11 +40,7 @@ function showMorningRoutine() {
   ul.innerHTML = "";
 
   // add items to list
-  addItemToList("get up");
-  addItemToList("turn on pc");
-  addItemToList("drink water");
-  addItemToList("shower");
-  addItemToList("teeth");
+  morningRoutineItems.forEach((item) => addItemToList(item));
 }
 
 function showNightTimeRoutine() {
@@ -43,10 +58,7 @@ function showNightTimeRoutine() {
   ul.innerHTML = "";
 
   // add items to list
-  addItemToList("dishes");
-  addItemToList("brush teeth");
-  addItemToList("diary");
-  addItemToList("go to bed");
+  nightTimeRoutineItems.forEach((item) => addItemToList(item));
 }
 
 function showGetHomeRoutine() {
@@ -64,12 +76,7 @@ function showGetHomeRoutine() {
   ul.innerHTML = "";
 
   // add items to list
-  addItemToList("wash hands");
-  addItemToList("drink water");
-  addItemToList("check calendar");
-  addItemToList("social media");
-  addItemToList("unpack bag");
-  addItemToList("wash face");
+  getHomeRoutineItems.forEach((item) => addItemToList(item));
 }
 
 function addItemToList(value) {
