@@ -6,44 +6,6 @@ function initializePage() {
   showMorningRoutine();
 }
 
-function addListenerToList() {
-  // Add a "checked" symbol when clicking on a list item
-  var list = document.querySelector("ul");
-  list.addEventListener(
-    "click",
-    function (ev) {
-      if (ev.target.tagName === "LI") {
-        if (ev.target.querySelector("#checkbox").checked) {
-          ev.target.style.backgroundColor = notCompletedToDoItemColor;
-        } else {
-          ev.target.style.backgroundColor = completedToDoItemColor;
-        }
-        ev.target.querySelector("#checkbox").checked =
-          !ev.target.querySelector("#checkbox").checked;
-      } else if (ev.target.id === "checkbox") {
-        if (!ev.target.parentElement.querySelector("#checkbox").checked) {
-          ev.target.parentElement.style.backgroundColor =
-            notCompletedToDoItemColor;
-        } else {
-          ev.target.parentElement.style.backgroundColor =
-            completedToDoItemColor;
-        }
-      } else if (ev.target.parentElement.tagName === "LI") {
-        if (ev.target.parentElement.querySelector("#checkbox").checked) {
-          ev.target.parentElement.style.backgroundColor =
-            notCompletedToDoItemColor;
-        } else {
-          ev.target.parentElement.style.backgroundColor =
-            completedToDoItemColor;
-        }
-        ev.target.parentElement.querySelector("#checkbox").checked =
-          !ev.target.parentElement.querySelector("#checkbox").checked;
-      }
-    },
-    false
-  );
-}
-
 function showMorningRoutine() {
   // change background color
   document.body.className = "bg-primary-subtle";
@@ -156,4 +118,42 @@ function newElementFromAdd() {
     addItemToList(inputValue);
     document.getElementById("myInput").value = "";
   }
+}
+
+function addListenerToList() {
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector("ul");
+  list.addEventListener(
+    "click",
+    function (ev) {
+      if (ev.target.tagName === "LI") {
+        if (ev.target.querySelector("#checkbox").checked) {
+          ev.target.style.backgroundColor = notCompletedToDoItemColor;
+        } else {
+          ev.target.style.backgroundColor = completedToDoItemColor;
+        }
+        ev.target.querySelector("#checkbox").checked =
+          !ev.target.querySelector("#checkbox").checked;
+      } else if (ev.target.id === "checkbox") {
+        if (!ev.target.parentElement.querySelector("#checkbox").checked) {
+          ev.target.parentElement.style.backgroundColor =
+            notCompletedToDoItemColor;
+        } else {
+          ev.target.parentElement.style.backgroundColor =
+            completedToDoItemColor;
+        }
+      } else if (ev.target.parentElement.tagName === "LI") {
+        if (ev.target.parentElement.querySelector("#checkbox").checked) {
+          ev.target.parentElement.style.backgroundColor =
+            notCompletedToDoItemColor;
+        } else {
+          ev.target.parentElement.style.backgroundColor =
+            completedToDoItemColor;
+        }
+        ev.target.parentElement.querySelector("#checkbox").checked =
+          !ev.target.parentElement.querySelector("#checkbox").checked;
+      }
+    },
+    false
+  );
 }
