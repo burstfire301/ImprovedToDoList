@@ -11,38 +11,41 @@
     <script src="Main.js"></script>
   </head>
   <body>
-    <div id="myDIV">
-      <h2>Morning Routine</h2>
-      <input type="text" id="myInput" placeholder="add to list..." />
-      <span onclick="newElementFromAdd()">Add</span><br />
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button
-          onclick="showMorningRoutine()"
-          class="btn btn-primary"
-          type="submit"
-        >
-          Morning Routine
-        </button>
+    <div class="container">
+      <div id="section-1">
+        <h2>Morning Routine</h2>
+        <input type="text" id="myInput" placeholder="add to list..." />
+        <span onclick="newElementFromAdd()">Add</span><br />
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button
+            onclick="showMorningRoutine()"
+            class="btn btn-primary"
+            type="submit"
+          >
+            Morning Routine
+          </button>
 
-        <button
-          onclick="showGetHomeRoutine()"
-          class="btn btn-warning"
-          type="submit"
-        >
-          Get Home Routine
-        </button>
-        <button
-          onclick="showNightTimeRoutine()"
-          class="btn btn-danger"
-          type="submit"
-        >
-          Night-Time Routine
-        </button>
+          <button
+            onclick="showGetHomeRoutine()"
+            class="btn btn-warning"
+            type="submit"
+          >
+            Get Home Routine
+          </button>
+          <button
+            onclick="showNightTimeRoutine()"
+            class="btn btn-danger"
+            type="submit"
+          >
+            Night-Time Routine
+          </button>
+        </div>
+      </div>
+
+      <div id="section-2">
+        <ul id="routine-list"></ul>
       </div>
     </div>
-
-    <ul id="routine-list"></ul>
-
     <script>
       initializePage();
     </script>
