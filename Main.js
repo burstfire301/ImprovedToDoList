@@ -18,6 +18,12 @@ function addListenerToList() {
 }
 
 function showMorningRoutine() {
+  // change background color
+  document.body.className = "bg-primary-subtle";
+
+  // change header text
+  document.getElementById("main-page-title").innerText = "Morning Routine";
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -31,6 +37,12 @@ function showMorningRoutine() {
 }
 
 function showNightTimeRoutine() {
+  // change background color
+  document.body.className = "bg-danger-subtle";
+
+  // change header text
+  document.getElementById("main-page-title").innerText = "Night-Time Routine";
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -43,6 +55,12 @@ function showNightTimeRoutine() {
 }
 
 function showGetHomeRoutine() {
+  // change background color
+  document.body.className = "bg-warning-subtle";
+
+  // change header text
+  document.getElementById("main-page-title").innerText = "Get Home Routine";
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
