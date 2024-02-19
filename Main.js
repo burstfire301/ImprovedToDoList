@@ -10,7 +10,7 @@ function addListenerToList() {
     "click",
     function (ev) {
       if (ev.target.tagName === "LI") {
-        ev.target.classList.toggle("checked");
+        ev.target.classList.toggle("active");
       }
     },
     false
@@ -63,19 +63,20 @@ function addItemToList(value) {
   li.appendChild(t);
 
   // create a close button
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
+  var button = document.createElement("button");
+  button.className = "btn-close";
 
   // add functionality to close button
-  span.onclick = function () {
+  button.onclick = function () {
     var div = this.parentElement;
     div.style.display = "none";
   };
 
   // add close button to list item
-  li.appendChild(span);
+  li.appendChild(button);
+
+  // add bootstrap styling
+  li.className = "list-group-item";
 
   // add list item to list
   document.getElementById("routine-list").appendChild(li);

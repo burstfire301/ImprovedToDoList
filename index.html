@@ -11,12 +11,23 @@
     <script src="Main.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div id="section-1">
-        <h2>Morning Routine</h2>
-        <input type="text" id="myInput" placeholder="add to list..." />
-        <span onclick="newElementFromAdd()">Add</span><br />
-        <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="container text-center">
+      <div class="row">
+        <h2 class="col">Morning Routine</h2>
+      </div>
+
+      <div class="row">
+        <input
+          class="col"
+          type="text"
+          id="myInput"
+          placeholder="add to list..."
+        />
+        <span class="col" onclick="newElementFromAdd()">Add</span><br />
+      </div>
+
+      <div class="row">
+        <div class="col btn-group" role="group" aria-label="Basic example">
           <button
             onclick="showMorningRoutine()"
             class="btn btn-primary"
@@ -42,8 +53,8 @@
         </div>
       </div>
 
-      <div id="section-2">
-        <ul id="routine-list"></ul>
+      <div class="row">
+        <ul class="list-group" id="routine-list"></ul>
       </div>
     </div>
     <script>
