@@ -2,22 +2,61 @@ const completedToDoItemColor = "#82ed88";
 const notCompletedToDoItemColor = "#cccccc";
 
 const morningRoutineItems = [
-  "get up",
-  "turn on pc",
+  "turn pc on",
   "drink water",
-  "shower",
+  "meds",
+  "chores",
+  "weather",
+  "check calendar",
+  "breakfast",
+  "due dates",
+  "clean room and make bed",
+  "meal prep",
+  "pack bag",
+  "dishes",
+  "cold shower",
   "teeth",
+  "hair",
+  "social media",
+  "get dressed",
 ];
 
-const nightTimeRoutineItems = ["dishes", "brush teeth", "diary", "go to bed"];
+const nightTimeRoutineItems = [
+  "raise desk",
+  "meds2",
+  "tomorrow morning routine",
+  "tomorrow chores",
+  "check tomorrow calendar",
+  "unpack bag",
+  "clean room and make bed",
+  "meal prep",
+  "dishes",
+  "pack for tomorrow",
+  "creatine",
+  "teeth and wash face",
+  "diary entry",
+  "gratitude",
+  "philosophy",
+  "social media",
+  "moisturize",
+  "set alarm",
+  "charge headphones",
+];
 
 const getHomeRoutineItems = [
   "wash hands",
   "drink water",
   "check calendar",
-  "social media",
+  "remove stuff from lounge/kitchen",
   "unpack bag",
-  "wash face",
+  "clean room and make bed",
+  "food",
+  "wash face/shower",
+  "teeth",
+  "social media",
+  "record washing",
+  "home clothes",
+  "hair",
 ];
 
 function initializePage() {
