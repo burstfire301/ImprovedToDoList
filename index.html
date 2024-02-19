@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Styles/MorningRoutine.css" />
+    <script src="Main.js"></script>
+  </head>
+  <body>
+    <div id="myDIV" class="header">
+      <h2 style="margin: 5px">Morning Routine</h2>
+      <input type="text" id="myInput" placeholder="add to list..." />
+      <span onclick="newElementFromAdd()" class="addBtn">Add</span><br />
+      <button onclick="showMorningRoutine()">Morning Routine</button>
+      <button onclick="showNightTimeRoutine()">Night-Time Routine</button>
+      <button onclick="showGetHomeRoutine()">Get Home Routine</button>
+    </div>
+
+    <ul id="routine-list"></ul>
+
+    <script>
+      showMorningRoutine();
+    </script>
+  </body>
+</html>
