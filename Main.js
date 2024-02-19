@@ -126,14 +126,21 @@ function addListenerToList() {
   list.addEventListener(
     "click",
     function (ev) {
+      // if click on list item
       if (ev.target.tagName === "LI") {
+        // if item was already completed
         if (ev.target.querySelector("#checkbox").checked) {
+          // set status color to 'not completed'
           ev.target.style.backgroundColor = notCompletedToDoItemColor;
+          // if item was not already completed
         } else {
+          // set status color to 'completed'
           ev.target.style.backgroundColor = completedToDoItemColor;
         }
+        // toggle checkbox 'checked' state
         ev.target.querySelector("#checkbox").checked =
           !ev.target.querySelector("#checkbox").checked;
+        // if click on checkbox
       } else if (ev.target.id === "checkbox") {
         if (!ev.target.parentElement.querySelector("#checkbox").checked) {
           ev.target.parentElement.style.backgroundColor =
@@ -142,6 +149,7 @@ function addListenerToList() {
           ev.target.parentElement.style.backgroundColor =
             completedToDoItemColor;
         }
+        // if click on any other child of list item
       } else if (ev.target.parentElement.tagName === "LI") {
         if (ev.target.parentElement.querySelector("#checkbox").checked) {
           ev.target.parentElement.style.backgroundColor =
