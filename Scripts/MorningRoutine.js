@@ -1,5 +1,5 @@
 const readItemsFromFile = () => {
-  return "hello world";
+  console.log("hello world");
 };
 
 // Create a "close" button and append it to each list item

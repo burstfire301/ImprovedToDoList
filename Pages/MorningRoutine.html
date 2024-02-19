@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/Styles/MorningRoutine.css" />
-    <script src="/Scripts/MorningRoutine.js"></script>
+    <link rel="stylesheet" href="../Styles/MorningRoutine.css" />
+    <script src="../Scripts/MorningRoutine.js"></script>
   </head>
   <body>
     <div id="myDIV" class="header">
@@ -14,9 +14,7 @@
       <a href="night-time_routine.html">night-time routine</a><br />
       <a href="get_home_routine.html">get home routine</a><br />
     </div>
-
-    <p>{readItemsFromFile()}</p>
-
+    <button onclick="readItemsFromFile()"></button>
     <ul id="morning-routine-list"></ul>
   </body>
 </html>
