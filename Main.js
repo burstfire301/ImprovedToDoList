@@ -24,8 +24,6 @@ const morningRoutineItems = [
 const nightTimeRoutineItems = [
   "raise desk",
   "meds2",
-  "tomorrow morning routine",
-  "tomorrow chores",
   "check tomorrow calendar",
   "unpack bag",
   "clean room and make bed",
