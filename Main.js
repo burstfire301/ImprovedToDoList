@@ -86,12 +86,18 @@ function showGetHomeRoutine() {
 function addItemToList(value) {
   // create a new list item
   var li = document.createElement("li");
-  var t = document.createTextNode(value);
-  li.appendChild(t);
+
+  // add bootstrap styling
+  li.className = "list-group-item";
+
+  // create a label
+  var label = document.createElement("label");
+  label.innerText = value;
+  label.className = "form-check-label";
 
   // create a close button
   var button = document.createElement("button");
-  button.className = "btn-close";
+  button.className = "btn-close col";
 
   // add functionality to close button
   button.onclick = function () {
@@ -99,11 +105,9 @@ function addItemToList(value) {
     div.style.display = "none";
   };
 
-  // add close button to list item
+  // add close button and label
+  li.appendChild(label);
   li.appendChild(button);
-
-  // add bootstrap styling
-  li.className = "list-group-item";
 
   // add list item to list
   document.getElementById("routine-list").appendChild(li);
