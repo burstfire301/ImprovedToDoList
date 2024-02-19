@@ -2,9 +2,9 @@
 The greatest TODO app of all time. The goal of ImprovedToDoList is to help me get through my routines faster.
 
 ## Latest Version: Feb 2024
-![alt text](https://github.com/christopher-jones-nz/ImprovedToDoList/blob/main/improved-to-do-list-feb-update.gif) (add gif here of website)
+![alt text](https://github.com/christopher-jones-nz/ImprovedToDoList/blob/main/improved-to-do-list-feb-update.gif)
 
-Link to full video: (record and link to full video walkthrough of my todo list app)
+Link to full video: https://youtu.be/SJ2Q3H3JiF4?si=NPRQ0vHwJ0nBK-Nl
 
 ## Why Does ImprovedToDoList Exist?
 I wanted to make a TODO list app to learn about HTML, CSS, JavaScript, and git. I have since worked as a Software Intern at Plugin Accountant and Victoria University of Wellington working with HTML, CSS, JavaScript, and git. Now I improve the app for my personal productivity and to practice what I have learned - both professionally and at university.
