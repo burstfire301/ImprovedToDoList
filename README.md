@@ -2,7 +2,7 @@
 The greatest TODO app of all time. The goal of ImprovedToDoList is to help me get through my routines faster.
 
 ## Latest Version: Feb 2024
-![alt text](https://tenor.com/en-GB/view/kitten-cute-eyes-aww-gif-21953064)(add gif here of website)
+![alt text](https://tenor.com/en-GB/view/kitten-cute-eyes-aww-gif-21953064)                           (add gif here of website)
 
 Link to full video: (record and link to full video walkthrough of my todo list app)
 
