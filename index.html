@@ -16,14 +16,23 @@
         <h2 class="col">Morning Routine</h2>
       </div>
 
-      <div class="row">
+      <div class="input-group mb-3">
         <input
-          class="col"
           type="text"
+          class="form-control"
+          placeholder="Add an item to the list"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
           id="myInput"
-          placeholder="add to list..."
         />
-        <span class="col" onclick="newElementFromAdd()">Add</span><br />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+          onclick="newElementFromAdd()"
+        >
+          Add Item
+        </button>
       </div>
 
       <div class="row">
