@@ -24,6 +24,9 @@ function showMorningRoutine() {
   // change header text
   document.getElementById("main-page-title").innerText = "Morning Routine";
 
+  // change document title
+  document.title = "Morning Routine";
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -43,6 +46,9 @@ function showNightTimeRoutine() {
   // change header text
   document.getElementById("main-page-title").innerText = "Night-Time Routine";
 
+  // change document title
+  document.title = "Night-Time Routine";
+
   // clear the list
   const ul = document.getElementById("routine-list");
   ul.innerHTML = "";
@@ -60,6 +66,9 @@ function showGetHomeRoutine() {
 
   // change header text
   document.getElementById("main-page-title").innerText = "Get Home Routine";
+
+  // change document title
+  document.title = "Get Home Routine";
 
   // clear the list
   const ul = document.getElementById("routine-list");
