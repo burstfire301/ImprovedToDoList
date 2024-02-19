@@ -88,16 +88,23 @@ function addItemToList(value) {
   var li = document.createElement("li");
 
   // add bootstrap styling
-  li.className = "list-group-item";
+  li.className = "row list-group-item";
 
   // create a label
   var label = document.createElement("label");
   label.innerText = value;
-  label.className = "form-check-label";
+  label.className = "form-check-label col-6";
 
   // create a close button
   var button = document.createElement("button");
-  button.className = "btn-close col";
+  button.className = "btn-close col-4";
+
+  // create a checkbox
+  //<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+  var checkbox = document.createElement("input");
+  checkbox.className = "form-check-input me-1";
+  checkbox.id = "checkbox";
+  checkbox.type = "checkbox";
 
   // add functionality to close button
   button.onclick = function () {
@@ -106,6 +113,7 @@ function addItemToList(value) {
   };
 
   // add close button and label
+  li.appendChild(checkbox);
   li.appendChild(label);
   li.appendChild(button);
 
