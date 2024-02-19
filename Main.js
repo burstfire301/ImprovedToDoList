@@ -10,7 +10,8 @@ function addListenerToList() {
     "click",
     function (ev) {
       if (ev.target.tagName === "LI") {
-        ev.target.classList.toggle("active");
+        ev.target.querySelector("#checkbox").checked =
+          !ev.target.querySelector("#checkbox").checked;
       }
     },
     false
