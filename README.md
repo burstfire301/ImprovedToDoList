@@ -1,4 +1,4 @@
-# Christopher Game
+# ImprovedToDoList
 The greatest TODO app of all time. The goal of ImprovedToDoList is to help me get through my routines faster.
 
 ## Latest Version: Feb 2024
