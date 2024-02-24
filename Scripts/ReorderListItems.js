@@ -21,14 +21,14 @@ list.addEventListener("dragover", (e) => {
 });
 
 function getDragAfterElement(list, y) {
-  const draggableElements = [...list.querySelectorAll("li:not(.dragging)")];
+  const candidateElements = [...list.querySelectorAll("li:not(.dragging)")];
 
-  return draggableElements.reduce(
-    (closest, child) => {
-      const box = child.getBoundingClientRect();
+  return candidateElements.reduce(
+    (closest, candidate) => {
+      const box = candidate.getBoundingClientRect();
       const offset = y - box.top - box.height / 2;
       if (offset < 0 && offset > closest.offset) {
-        return { offset: offset, element: child };
+        return { offset: offset, element: candidate };
       } else {
         return closest;
       }
