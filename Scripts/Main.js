@@ -120,6 +120,7 @@ function addItemToList(value) {
   // create a new list item
   var li = document.createElement("li");
   li.style.backgroundColor = "#cccccc";
+  li.draggable = "true";
 
   // add bootstrap styling
   li.className = "row list-group-item";
