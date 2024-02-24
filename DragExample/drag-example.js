@@ -1,4 +1,4 @@
-const list = document.getElementById("sortable-list");
+const list = document.getElementById("routine-list");
 let draggedItem = null;
 
 list.addEventListener("dragstart", (e) => {
