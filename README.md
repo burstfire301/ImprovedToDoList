@@ -19,6 +19,7 @@ I wanted to make a TODO list app to learn about HTML, CSS, JavaScript, and git. 
 - [ ] list items loaded from json
 - [ ] lists can be saved
 - [ ] list status is maintained during a session
+- [x] list items can be re-ordered by dragging
 
 ## Feedback
 If you have any feedback on the app or feature requests please let me know!
