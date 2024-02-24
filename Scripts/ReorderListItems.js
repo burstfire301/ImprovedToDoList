@@ -25,8 +25,10 @@ function getDragAfterElement(list, y) {
 
   return candidateElements.reduce(
     (closest, candidate) => {
+      // calculate candidate offset from dragged item
       const box = candidate.getBoundingClientRect();
       const offset = y - box.top - box.height / 2;
+
       if (offset < 0 && offset > closest.offset) {
         return { offset: offset, element: candidate };
       } else {
